@@ -4,6 +4,11 @@ import CurrentWeather from "./components/current-weather/current-weather";
 // import Forecast from "./components/forecast/forecast";
 import { WEATHER_API_URL, WEATHER_API_KEY } from "./api";
 import "./App.css";
+import Forecast from "./components/forecast/forecast";
+import Heading from "./components/heading/heading";
+import Quote from "./components/Qoutes/qoutes";
+import Footer  from "./components/Footer/footer";
+import '../src/components/search/search.css';
 
 function App() {
   const [currentWeather, setCurrentWeather] = useState(null);
@@ -32,9 +37,16 @@ function App() {
 
   return (
     <div className="container">
+      <Heading></Heading>
+      
       <Search onSearchChange={handleOnSearchChange} />
+      {!currentWeather && !forecast && <Quote />}
+      
       {currentWeather && <CurrentWeather data={currentWeather} />}
-      {/* {forecast && <Forecast data={forecast} />} */}
+      {forecast &&< Forecast data={forecast}/>}
+
+      <Footer/>
+      
     </div>
   );
 }

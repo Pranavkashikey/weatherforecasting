@@ -1,11 +1,17 @@
 .weather {
-    width: 300px;
-    border-radius: 6px;
-    box-shadow: 10px -2px 20px 2px rgb(0 0 0 / 30%);
+    width: 320px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     color: #fff;
-    background-color: #333;
-    margin: 20px auto 0 auto;
-    padding: 0 20px 20px 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    margin: 20px auto;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .weather:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
   }
   
   .top,
@@ -13,33 +19,34 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 0;
   }
   
   .city {
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 1;
+    font-weight: 700;
+    font-size: 20px;
     margin: 0;
     letter-spacing: 1px;
+    animation: fadeIn 1s ease-in-out;
   }
   
   .weather-description {
     font-weight: 400;
-    font-size: 14px;
-    line-height: 1;
+    font-size: 16px;
     margin: 0;
+    animation: fadeIn 1.5s ease-in-out;
   }
   
   .weather-icon {
     width: 100px;
+    animation: rotate 2s infinite linear;
   }
   
   .temperature {
-    font-weight: 600;
-    font-size: 70px;
-    width: auto;
-    letter-spacing: -5px;
+    font-weight: 700;
+    font-size: 60px;
     margin: 10px 0;
+    animation: fadeIn 2s ease-in-out;
   }
   
   .details {
@@ -50,21 +57,53 @@
   .parameter-row {
     display: flex;
     justify-content: space-between;
+    padding: 5px 0;
+    animation: fadeInUp 1s ease-in-out;
   }
   
   .parameter-label {
     text-align: left;
-    font-weight: 400;
-    font-size: 12px;
+    font-weight: 500;
+    font-size: 14px;
   }
   
   .parameter-value {
     text-align: right;
-    font-weight: 600;
-    font-size: 12px;
+    font-weight: 700;
+    font-size: 14px;
   }
   
   .parameter-label.top {
     border-bottom: 1px solid #fff;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
   }
   

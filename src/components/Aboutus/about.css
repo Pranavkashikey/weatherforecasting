@@ -1,0 +1,224 @@
+.about-us-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s forwards;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+  }
+  
+  .about-section,
+  .history-section,
+  .mission-section,
+  .team-section {
+    margin-bottom: 40px;
+    font-size: 30px;
+    font-weight: bolder;
+    opacity: 0;
+    animation: fadeIn 0.8s forwards;
+    text-align: center;
+  }
+  
+  .about-section {
+    animation-delay: 0.2s;
+  }
+  
+  .history-section {
+    animation-delay: 0.4s;
+  }
+  
+  .mission-section {
+    animation-delay: 0.6s;
+  }
+  
+  .team-section {
+    animation-delay: 0.8s;
+  }
+  
+  .about-section h1,
+  .history-section h2,
+  .mission-section h2,
+  .team-section h2 {
+    text-align: center;
+    color: #073a52;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+  
+  .about-section h1::after,
+  .history-section h2::after,
+  .mission-section h2::after,
+  .team-section h2::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: #073a52;
+    transition: width 0.4s, left 0.4s;
+  }
+  
+  .about-section h1:hover::after,
+  .history-section h2:hover::after,
+  .mission-section h2:hover::after,
+  .team-section h2:hover::after {
+    width: 100%;
+    left: 0;
+  }
+  
+  .about-section p,
+  .history-content p,
+  .mission-content p {
+    text-align: center;
+    color: #0b0b0b;
+    line-height: 1.6;
+    font-size: 23px;
+    opacity: 0;
+    animation: fadeInText 1.2s forwards;
+    animation-delay: 0.5s;
+  }
+  
+  @keyframes fadeInText {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .history-content,
+  .mission-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .history-content img,
+  .mission-content img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .history-content img:hover,
+  .mission-content img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .team-content {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .team-member {
+    text-align: center;
+    max-width: 200px;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-delay: 0.8s;
+  }
+  
+  .team-member img {
+    width: 100%;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .team-member img:hover {
+    transform: scale(1.3);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .team-member h3 {
+    font-size: 24px;
+    margin-top: 10px;
+    color: #121010;
+  }
+  
+  .team-member p {
+    color: #073a52;
+    font-size: 16px;
+  }
+
+  .back-button-container {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .back-button {
+    background-color: #00b0ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+  }
+  
+  .back-button:hover {
+    background-color: #008fcc;
+  }
+  
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .history-content,
+    .mission-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .team-content {
+      flex-direction: column;
+    }
+  
+    .about-section, .history-section, .mission-section, .team-section {
+      font-size: 24px;
+    }
+  
+    .team-member {
+      max-width: 100%;
+    }
+  
+    .team-member h3 {
+      font-size: 20px;
+    }
+  
+    .team-member p {
+      font-size: 14px;
+    }
+  }
+  

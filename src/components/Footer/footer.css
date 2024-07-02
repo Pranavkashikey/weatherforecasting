@@ -1,0 +1,124 @@
+/* src/components/Footer.css */
+
+.footer {
+    background: linear-gradient(135deg, #3a3a3a, #111);
+    color: #fff;
+    /* width: 1000px; */
+    text-align: center;
+    padding: 40px 20px;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(80, 143, 177, 0.1);
+    border-top: 2px solid #0056b3;
+  }
+  
+  .footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer .footer-section {
+    flex: 1;
+    padding: 20px;
+    min-width: 250px;
+  }
+  
+  .footer .logo-text {
+    /* color: #fff; */
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .footer .socials a {
+    margin: 0 10px;
+    /* color: #fff; */
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer .socials a:hover {
+    color: #0056b3;
+  }
+  
+  .footer .socials a i {
+    font-size: 24px;
+  }
+  
+  .footer .links h2 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    /* color: #fff; */
+  }
+  
+  .footer .links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer .links ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer .links ul a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #ddd;
+    transition: color 0.3s ease;
+  }
+  
+  .footer .links ul a:hover {
+    color: #41839f;
+  }
+  
+  .footer .contact-form h2 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #fff;
+  }
+  
+  .footer .contact-form .text-input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .footer .contact-form .contact-btn {
+    background: #0056b3;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .footer .contact-form .contact-btn:hover {
+    background: #004494;
+  }
+  
+  .footer .footer-bottom {
+    padding: 20px;
+    border-top: 1px solid #444;
+    margin-top: 20px;
+    background: #222;
+    font-size: 14px;
+  }
+  
+  .footer .footer-bottom a {
+    color: #0056b3;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer .footer-bottom a:hover {
+    text-decoration: underline;
+    color: #003d99;
+  }
+  

@@ -1,0 +1,83 @@
+/* Container styling to center and align the search bar */
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    max-width: 1400px;
+    border: 3px solid black;
+    animation: containerFadeIn 2s ease-in-out;
+  }
+  
+  /* Search bar styling */
+  .async-paginate {
+    width: 100%;
+  }
+  
+  /* Styling for input inside AsyncPaginate */
+  .async-paginate input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #f54a4a;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+  
+  /* Styling for the placeholder text */
+  .async-paginate::placeholder {
+    color: #7b1212;
+  }
+  
+  /* Input focus effect */
+  .async-paginate input:focus {
+    border-color: #ff7878;
+    box-shadow: 0 0 10px rgba(255, 120, 120, 0.5);
+    transform: scale(1.02);
+    outline: none;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .search-container {
+      padding: 10px;
+    }
+    
+    .async-paginate input {
+      font-size: 14px;
+      padding: 8px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .search-container {
+      padding: 5px;
+    }
+  
+    .async-paginate input {
+      font-size: 12px;
+      padding: 6px;
+    }
+  }
+  
+  /* Keyframes for container animation */
+  @keyframes containerFadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Keyframes for input focus animation */
+  @keyframes inputFocus {
+    from {
+      box-shadow: none;
+    }
+    to {
+      box-shadow: 0 0 10px rgba(255, 120, 120, 0.5);
+    }
+  }
+  
