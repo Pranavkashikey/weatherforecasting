@@ -6,7 +6,17 @@ const Footer = () => {
   const navigate = useNavigate(); // Initialize useNavigate
 
   const navigateToAbout = () => {
-    navigate('/about'); // Navigate to '/about' route
+    navigate('/about');
+     // Navigate to '/about' route
+  };
+  const navigateToService = () => {
+    navigate('/services');
+     // Navigate to '/about' route
+  };
+
+  const navigateToContact = () => {
+    navigate('/contactus');
+     // Navigate to '/about' route
   };
 
   return (
@@ -27,13 +37,13 @@ const Footer = () => {
           <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#" onClick={navigateToAbout}>About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#" onClick={navigateToService}>Services</a></li>
+            <li><a href="#" onClick={navigateToContact}>Contact</a></li>
           </ul>
         </div>
 
         <div className="footer-section contact-form">
-          <h2>Contact Us</h2>
+          <h2>Send Your Doubts !</h2>
           <br />
           <form action="https://formspree.io/f/meojqapp" method="POST">
             <input type="email" name="email" className="text-input contact-input" placeholder="Your email address..." required />

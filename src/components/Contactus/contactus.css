@@ -1,0 +1,96 @@
+body {
+    /* background: linear-gradient(to right, #74ebd5, #9face6); */
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 0;
+    color: #333;
+  }
+  
+  .contact-us-page {
+    margin: 0 auto;
+    padding: 25px;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .contact-us-header {
+    text-align: center;
+    margin-bottom: 40px;
+    animation: slideDown 1s ease-in-out;
+  }
+  
+  .contact-us-header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #34495e;
+  }
+  
+  .contact-us-header p {
+    font-size: 1.2em;
+    color: #7f8c8d;
+  }
+  
+  .contact-us-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    margin-bottom: 5px;
+    display: block;
+    color: #34495e;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .form-group textarea {
+    height: 100px;
+    resize: vertical;
+  }
+  
+  .submit-button {
+    padding: 10px 20px;
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: center;
+  }
+  
+  .submit-button:hover {
+    background-color: #1f6390;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideDown {
+    from {
+      transform: translateY(-20px);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  

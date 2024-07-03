@@ -5,6 +5,8 @@ import './index.css'; // Your global CSS file
 import App from './App'; // Assuming App is your main component with routing
 import reportWebVitals from './reportWebVitals';
 import About from '../src/components/Aboutus/About';
+import Services from './components/Services/services';
+import ContactUs from './components/Contactus/contactus';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -14,6 +16,8 @@ root.render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services/>}></Route>
+        <Route path="/contactus" element ={<ContactUs/>}></Route>
         {/* Add more routes as needed */}
       </Routes>
     
